@@ -1,0 +1,4 @@
+numpy==2.4.0
+Pillow==12.1.0
+pyproj==3.7.2
+GDAL 3.11.0 "Eganville", released 2025/05/06

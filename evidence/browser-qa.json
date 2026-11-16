@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-16",
+  "checks": {
+    "fill_visible": true,
+    "original_toggle_restores_hole": true,
+    "same_315_light_visual_match": true,
+    "fill_outline_matches_hole": true
+  },
+  "screenshots": [
+    "filled.png",
+    "original.png",
+    "same-light.png"
+  ],
+  "fps_benchmarked": false
+}

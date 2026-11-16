@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-16",
+  "filled_cells": 15310,
+  "filled_area_km2": 153.11624403183026,
+  "ring_width_approx_m": 2000,
+  "overlap_raw": {
+    "n": 9986,
+    "median_m": -18.79058837890625,
+    "mae_m": 19.852373123168945,
+    "rmse_m": 22.231861114501953,
+    "p05_p95_m": [
+      -37.306182861328125,
+      -5.0418548583984375
+    ]
+  },
+  "constant_bias_added_m": -18.79058837890625,
+  "overlap_after_bias": {
+    "n": 9986,
+    "median_m": 0.0,
+    "mae_m": 7.718794822692871,
+    "rmse_m": 10.431038856506348,
+    "p05_p95_m": [
+      -18.515594482421875,
+      13.748733520507812
+    ]
+  },
+  "boundary_steps_including_natural_slope": {
+    "n": 548,
+    "median_m": -2.26025390625,
+    "mae_m": 45.5639762878418,
+    "rmse_m": 55.5979118347168,
+    "p05_p95_m": [
+      -81.72063446044922,
+      94.10332489013672
+    ]
+  },
+  "original_valid_cells_unchanged": true,
+  "other_nodata_unchanged": true,
+  "fill_method": "GLO30 average resampling to existing 100m grid, plus median Taiwan-minus-GLO30 overlap offset; only selected enclosed source NoData component",
+  "accuracy_in_hole": "No independent reference; not verified",
+  "source_sha256": "cdd4e1dc60a0da87a556e07e20f7c20b5dad21eca69e80aadff498743ea3f82f"
+}

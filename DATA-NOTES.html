@@ -1,0 +1,14 @@
+<!doctype html><meta charset="utf-8"><title>Day17 資料說明</title><style>body{max-width:900px;margin:40px auto;padding:20px;font:17px/1.8 system-ui}pre{white-space:pre-wrap;overflow-wrap:anywhere}</style><h1>Day17 補值資料與限制</h1><pre>Day17 v2｜來源缺值補充，2026-11-16
+原始有效高程與法向量保留於 base-data/；本版經本人授權公開。
+原資料：內政部2026版20m高程，https://data.gov.tw/dataset/178729 ，政府資料開放授權條款第1版。原始檔名不代表全區2026年測量。原檔WGS84 TM121與索引TWD97標示不一致，沿用檔案WKT。垂直基準尚未確認。
+補充資料：Copernicus DEM GLO-30，AWS公開2021 release，1 arcsecond DSM（包含樹冠與建物），WGS84 / EGM2008高程。非臺灣原資料同年代、同精度、同地表定義。
+下載：https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N24_00_E121_00_DEM/Copernicus_DSM_COG_10_N24_00_E121_00_DEM.tif
+說明：https://copernicus-dem-30m.s3.amazonaws.com/readme.html
+授權與垂直基準：https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing-missions/collections-description/COP-DEM
+produced using Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved
+方法：以GDAL average重採樣到原版約100m網格，僅填補包含來源矩形缺口的內部連通NoData區。使用外圍約2km有效重疊帶的高差中位數作常數偏差校正。不是正式垂直基準轉換，也不是用周邊高程憑空內插整個山區。原有有效高程及其他缺值完全保留。海洋與其他未涵蓋處未補。
+補值15,310格，約153.116平方公里。重疊帶9,986格，Taiwan−Copernicus中位數−18.791m；補充高程減18.791m。校正後重疊帶MAE7.719m、RMSE10.431m；這是校正樣本上的差異，不是獨立精度驗證。缺口內沒有真值，實際誤差未知。
+跨邊界相鄰100m網格的高差含自然山坡，不能當接縫誤差或垂直精度。未強行平滑原始山脊，來源切換仍可能產生局部接縫。黃線為補值格範圍；地圖提供原始／補值切換。
+光影為Horn坡面方向與WebGL Lambert受光，非投射陰影或指定日期真實日照；兩圖光源不同但高程模式同步。100m彙整不恢復原始20m細節。
+重現：在本儲存庫根目錄 python3 build-fill.py；需要base-data/保留的terrain.bin、terrain.hdr、terrain-info.json及本版已下載來源、GDAL、numpy、scipy、Pillow。來源hash及統計見qa.json。fill-mask.png為精確格網補值遮罩；terrain-filled.tif為有座標成果。
+</pre>

@@ -1,0 +1,23 @@
+{
+  "file": "/Users/dongpodeng/Documents/ChatGPT/30DayMapChallenge 2026/outputs/day17-light-dark-v2/video/day17-demo.webm",
+  "decoded_frames": 947,
+  "duration_between_first_last_frame": 31.89,
+  "mean_fps": 29.664471621197865,
+  "frame_gap_p50_seconds": 0.03300000000000125,
+  "frame_gap_p95_seconds": 0.03500000000000014,
+  "frame_gap_max_seconds": 0.25099999999999767,
+  "long_frame_gaps_over_100ms": 2,
+  "decode_success": true,
+  "resolution": [
+    1600,
+    1000
+  ],
+  "visual_checks": [
+    "Equal-aspect rendering; no stretch",
+    "Light rotation and synchronized zoom visible",
+    "Original hole and filled terrain visible"
+  ],
+  "capture": "Actual WebGL canvas, automated controls, composed layout",
+  "audio": "None; terrain map has no audio source",
+  "timing_note": "2 gaps >100ms; maximum251ms. No synthetic frame interpolation."
+}
